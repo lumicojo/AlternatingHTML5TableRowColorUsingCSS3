@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5</title>
+    <style>
+      div {
+        font-family: Calibri;
+        font-size: 16pt;
+        width:200px;
+        height: 200px;
+        background-color: #ffd800;
+        border: 1px solid black;
+      }
+      /* if you want to access a class;  div.class in this case is div.yellow */
+      div.yellow {
+        width: 100px;
+        height: 50px;
+        font-family: 'Times New Roman';
+        font-size: 12pt;
+        background-color: greenyellow;
+      }
+
+      /* to access child element inside div do this */
+      div  > span {
+        font-family: 'Courier New';
+        font-size: 40pt;
+        font-weight: bold;
+        color: blue
+      }
+    </style>
+  </head>
+  <!-- After finished with adding all the div in body
+  manipulate the div in style which it goes under the title -->
+  <body>
+    <div>
+      <!-- this is a parent -->
+      <div>DIV 1
+        <!-- this is a child div 1a of main DIV-->
+        <div><span>DIV 1a</span></div>
+      </div>
+      <div class="yellow">DIV 2</div>
+      <div><span>DIV 3</span></div>
+    </div>
+  </body>
+</html>

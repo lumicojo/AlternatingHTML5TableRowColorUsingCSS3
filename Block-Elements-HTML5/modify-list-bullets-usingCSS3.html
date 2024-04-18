@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modify HTML5 List Bullets  Using CSS3</title>
+    <style>
+      ul {
+        font-family: Calibri;
+        font-size: 16pt;
+        list-style-type: square;
+        list-style-position: inside;
+        }
+      ol {
+        font-family: 'Times New Roman';
+        font-size: 16pt;
+        list-style-type: upper-alpha;
+        }
+      li {
+        font-family: Calibri;
+        font-size: 12pt;
+        list-style-image: url("bullet.png");
+        }
+    </style>
+  </head>
+ <body>
+  <ul>
+    <li>CPU: Core i5</li>
+    <li>Ram: 16 GB</li>
+    <li>OS: Windows 8.1</li>
+    <ul>
+      <li>CPU: Core i5</li>
+      <li>Ram: 16 GB</li>
+      <li>OS: Windows 8.1</li>
+      <ul>
+        <li>CPU: Core i5</li>
+        <li>Ram: 16 GB</li>
+        <li>OS: Windows 8.1</li>
+      </ul>
+    </ul>
+  </ul>
+  <ol type="i" start="5">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+ </body>
+</html>

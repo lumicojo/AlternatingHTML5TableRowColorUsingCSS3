@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Configuring HTML List</title>
+    <style>
+      ol {
+        font-family: Calibri;
+        font-size: 16pt;
+        /* <!-- you can change the list-style-type way u want--> */
+        list-style-type: upper-roman;
+        list-style-position: inside;
+      }
+
+      ul {
+        font-family: 'Times New Roman';
+        font-size: 16pt;
+        list-style-type: square;
+      }
+/* this li  is going to apply to everything regardless is a ol or ul */
+      li {
+        font-family: 'Courier New';
+        font-size: 18pt;
+      }
+
+      /* OR you can combine ol with ul like this:
+      ol, ul {
+        font-family: Calibri;
+        font-size: 16pt;
+        list-style-type: upper-roman;
+        list-style-position: inside;
+      } */
+
+    </style>
+  </head>
+ <body>
+  <ul>
+    <li>CPU: Core i5</li>
+    <li>Ram: 16 GB</li>
+    <li>OS: Windows 8.1</li>
+    <ul>
+      <li>CPU: Core i5</li>
+      <li>Ram: 16 GB</li>
+      <li>OS: Windows 8.1</li>
+      <ul>
+        <li>CPU: Core i5</li>
+        <li>Ram: 16 GB</li>
+        <li>OS: Windows 8.1</li>
+      </ul>
+    </ul>
+  </ul>
+  <ol type="i" start="5">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+ </body>
+</html>
