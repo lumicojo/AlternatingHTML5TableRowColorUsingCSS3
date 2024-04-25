@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <title>Display or Hide Objects using CSS</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      nav {
+        font-family: Calibri;
+        font-size: 14;
+        color: #b200ff;
+        text-decoration: none;
+      }
+
+      /* this change  level */
+      nav ul ul ul {
+        color:#f00;
+      }
+
+      li li li {
+        /* font-size: 18pt; */
+        /* this will change display if put only one li, or 2 li or if
+      you put display none it wont display anything it will hide */
+        /* display: none; */
+        display: normal;
+      }
+      a.blue {
+        color: #0080ff;
+      }
+    </style>
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a>
+      <ul>
+      <li><a href="#">The Company</a></li>
+      <li><a href="#">The People</a> </li>
+      <ul>
+      <li><a href="#">Our Employees</a></li>
+      <li><a href="#" class="blue">Our Management</a></li>
+    </ul>
+      <li><a href="#">The  Board</a></li>
+      <li><a href="#">Our History</a></li>
+    </ul>
+      </li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
