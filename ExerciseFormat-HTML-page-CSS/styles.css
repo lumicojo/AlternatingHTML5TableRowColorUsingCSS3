@@ -1,0 +1,14 @@
+/* list-style.css */
+.character-list {
+  list-style-type: square;
+  font-size: 10pt;
+}
+
+.character-list li {
+  font-family: Calibri;
+}
+
+/* Hover effect for the last link */
+a:hover {
+  background-color: #336699;
+}

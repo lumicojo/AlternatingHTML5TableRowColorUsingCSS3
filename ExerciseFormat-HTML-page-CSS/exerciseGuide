@@ -1,0 +1,118 @@
+Exercise
+  You have a basic HTML5 web page with the necessary content and information.
+   You need to organize and format it using a combination of internal cascading
+    styles, inline styles, and external style sheet coding.
+
+  Before you start, open default.html to view the content.
+  Most of the code you will be adding will be within the body
+   and any style tags that you create in this document.
+
+
+
+   Steps list
+
+   Step	Instructions
+
+   1	Create separate DIV containers for formatting for each of the following sections:
+
+   The introduction Children's Literature  section with general information
+   The Classic books available to order  section with the table
+   Each of the four Description  sections for each book along with their
+   respective lists of characters
+   2	Apply formatting to the first Children's Literature  Div using inline  styles so
+   that the entire section is surrounded by a light, orange-colored background.
+
+   3 Apply formatting to the heading in Children's Literature  Div using an internal
+     style sheet, so that its font color is red  and its font family is Calibri.
+
+   4 Add an internal  style sheet to format all paragraphs in the document,
+   so that their font color is a shade of blue  and its font family is courier new.
+
+   5 Add a class  to the paragraph in the Children's Literature  section, so that it
+    can be formatted independently using an internal CSS style to italicize it.
+    The class should be named "variation".
+
+   6	For Classic books available to order  section, create a DIV ID, so that it can be formatted independently
+    of the other sections with DIVs. Add an internal  style for that DIV ID (called "tablediv"),
+     so that the entire section is surrounded by a blue-colored background.
+     Change the dimensions, so that it surrounds the entire section appropriately.
+
+   7	Apply formatting to the table in the Classic books available to order  section
+   using an internal  style sheet. The table requires a border and the rows need to have
+   alternate colors of 2 shades of yellow (of your choosing).
+
+   8	Add an internal style sheet to specify the formatting the four remaining DIVs
+    associated with the Description  sections. Each section must be surrounded
+    by a light orange-colored background, the font family must be Arial,
+    and the dimensions should be 900 wide X 220 high.
+
+   9	Add an internal style sheet for a common nested element in each of the
+   Descriptionsections. Use CSS formatting for nested elements to specify that the
+    header for each of these DIVs should be of a green-shaded color of your choosing.
+
+   10	Apply formatting to the span of each of the Book titles in the Description
+   sections. Use an internal style sheet to format the book titles, so that the font
+    family is Helvetica, the color value is #FF0099, and the font weight is bold.
+
+   11	Create an external style sheet called liststyle.css.  Add a link for it in
+    your default.htmldocument. Add code in the external style sheet called liststyle.
+    css,  to format theCharacter  list elements in each of the Description  sections.
+     The bullets need to be square-shaped and the font size should be 10 points.
+     Also, the individual list elements should be Calibri.
+
+   12	For the "Click here" link in the very last sentence on the page,
+    add an internal style sheet that makes the background of the link change color
+    when the mouse hovers over it. Make the background color a shade of blue
+    of your choosing.
+
+
+
+
+    Children’s Literature
+    Most children's books are enjoyable for children and adults alike. Children are never too young to be read to. In addition to building a bond between parent and child, daily reading to preschool children may be the single most important thing parents can do to improve their children's chances for success in school. Of course, parents should continue to read to their children after they start school and for as long as they will listen—which, if all goes well, will be throughout the elementary school years.
+
+
+    Classic books available to order
+    Title	Date Published
+    Cat in the hat	1957
+    The Little Mermaid	1837
+    Little Red Hen	1942
+    Charlie and the Chocolate Factory	1964
+
+    Description:
+    The Cat in the Hat is a children's book written and illustrated by Theodor Geisel under the pen name Dr. Seuss and first published in 1957. The story centers on a tall anthropomorphic cat, who wears a red and white-striped hat and a red bow tie.
+
+    Characters:
+
+    Thing One
+    Thing Two
+    The Cat in the Hat
+    Fish
+    Description:
+    The Little Mermaid is a well-known fairy tale by the Danish author Hans Christian Andersen about a young mermaid willing to give up her life in the sea and her identity as a mermaid to gain a human soul and the love of a human prince.
+
+    Characters:
+
+    The Sea Witch
+    The Sea King
+    The Little Mermaid
+    The Prince
+    Description:
+    The Little Red Hen is an old folk tale, most likely of Russian origin. The best-known version in the United States is that popularized by Little Golden Books, a series of children's books published for the mass market since the 1940s.
+
+    Characters:
+
+    Little Red Hen
+    Sleepy Cat
+    Lazy Dog
+    Noisy Yellow Duck
+    Description:
+    Charlie and the Chocolate Factory is a 1964 children's book by British author Roald Dahl. The story features the adventures of young Charlie Bucket inside the chocolate factory of eccentric chocolatier Willy Wonka.
+
+    Characters:
+
+    Willy Wonka,
+    Charlie Bucket
+    Grandpa Joe
+    Veruca Salt
+    Click here for more resources for other classic children's literature.

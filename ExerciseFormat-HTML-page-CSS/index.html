@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <title>Children's Literature</title>
+
+    <style>
+      /* Internal Styles */
+      #children-literature {
+        background-color: lightorange;
+      }
+
+      #children-literature h1 {
+        color: red;
+        font-family: Calibri;
+      }
+
+      p {
+        color: #0066CC;
+        font-family: Courier New;
+      }
+
+      .variation {
+        font-style: italic;
+      }
+
+      #tablediv {
+        background-color: blue;
+        width: 80%;
+        margin: auto;
+      }
+
+      #classic-books-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #classic-books-table th, #classic-books-table td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+
+      #classic-books-table tr:nth-child(even) {
+        background-color: #FFFF99;
+      }
+
+      #classic-books-table tr:nth-child(odd) {
+        background-color: #FFFFCC;
+      }
+
+      .book-description {
+        background-color: lightorange;
+        width: 900px;
+        height: 220px;
+        font-family: Arial;
+        margin-bottom: 20px;
+      }
+
+      .book-description h2 {
+        color: green;
+      }
+
+      .book-title {
+        font-family: Helvetica;
+        color: #FF0099;
+        font-weight: bold;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="liststyle.css">
+  </head>
+  <body>
+  <article>
+<!--Header-->
+    <header>
+      <h1>Children's Literature</h1>
+    </header>
+<!-- Main Content-->
+    <article>
+<!-- Children's Literature Introduction -->
+      <div id="children-literature">
+        <h2>Introduction</h2>
+        <p class="variation">Most children's books are enjoyable for children and adults alike.
+          Children are never too young to be read to.
+          In addition to building a bond between parent and child, daily
+          reading to preschool children may be the single most important
+           thing parents can do to improve their children's chances for success in school.</p>
+      </div>
+<!-- Classic Books Section -->
+      <div id="tablediv">
+        <h2>Classic Books Available to Order</h2>
+        <table id="classic-books-table">
+          <tr>
+            <th>Title</th>
+            <th>Date Published</th>
+          </tr>
+          <tr>
+            <td>Cat in the Hat</td>
+            <td>1957</td>
+          </tr>
+          <tr>
+            <td>The Little Mermaid</td>
+            <td>1837</td>
+          </tr>
+          <tr>
+            <td>Little Red Hen</td>
+            <td>1942</td>
+          </tr>
+          <tr>
+            <td>Charlie and the Chocolate Factory</td>
+            <td>1964</td>
+          </tr>
+        </table>
+      </div>
+<!-- Book Descriptions -->
+      <div class="book-description">
+        <h2>Cat in the Hat</h2>
+        <p>Characters:</p>
+        <ul>
+          <li>Thing One</li>
+          <li>Thing Two</li>
+          <li>The Cat in the Hat</li>
+          <li>Fish</li>
+        </ul>
+      </div>
+    </article>
+<!-- Book Descriptions -->
+    <div class="book-description">
+      <h2>The Sea Witch</h2>
+      <p>Characters:</p>
+      <ul>
+        <li>The Sea Witch</li>
+        <li>The Sea King</li>
+        <li>The Little Mermaid</li>
+        <li>The Prince</li>
+      </ul>
+    </div>
+<!-- Book Descriptions -->
+    <div class="book-description">
+      <h2>Little Red Hen</h2>
+      <p>Characters:</p>
+      <ul>
+        <li>Little Red Hen</li>
+        <li>Sleepy Cat</li>
+        <li>Lazy Dog</li>
+        <li>Noisy Yellow Duck</li>
+      </ul>
+    </div>
+  </article>
+  <!-- External Style Sheet for List -->
+  <a href="liststyle.css">Click here for more resources for other classic children's literature.</a>
+  </body>
+</html>
