@@ -1,0 +1,32 @@
+a {
+  color: purple;
+}
+a {
+  color: green;
+}
+
+#special {
+  color: green;
+}
+p {
+  color: purple;
+}
+
+a {
+  display: block;
+}
+
+
+/* Inheritance */
+div {
+  font-family: 'courier';
+}
+/* Non-inheritance */
+p {
+  background-color: khaki;
+}
+div {
+  background-color: lightblue;
+  height: 200px;
+}
+

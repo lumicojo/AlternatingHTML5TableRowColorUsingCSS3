@@ -1,0 +1,57 @@
+/* p {
+  color: red;
+} */
+
+/* p, li {
+  color: red;
+} */
+
+
+p, li {
+  font-size: 18px;
+}
+
+#header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  margin: 0;
+  padding: 30px;
+}
+
+
+  body {
+    font-family: 'georgia';
+    background-color: #EEE;
+    margin: 0;
+  }
+
+  .review {
+    background-color: white;
+    width: 650px;
+    /* display: none; */
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  .active {
+    display: block;
+    margin: 40px auto;
+  }
+
+  img {
+    width: 650px;
+  }
+
+
+
+  button {
+    font-weight: bold;
+    font-size:  16;
+    color: white;
+    background-color: #28A745;
+    padding: 10px 200px;
+    /* Borders  make the conners round*/
+    border: solid 2px #1B7530;
+    border-radius: 50px;
+  }

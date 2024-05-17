@@ -1,0 +1,21 @@
+p {
+  color: red;
+}
+
+
+#myFirstId {
+  color: red;
+}
+
+.myFirstClass {
+  color: red;
+}
+
+/* You can do the same thing with ids and classes, too
+#myFirstId, .myFirstClass {
+  color: red;
+} */
+
+p, button {
+  color: red;
+}
