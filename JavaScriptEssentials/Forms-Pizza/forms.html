@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavScript Events</title>
+    <script type="text/javascript">
+
+      function checkToppings() {
+        toppings=" ";
+        var theForm = document.forms[0];
+        // only checking toppings here as payment type is set to a default value
+        for (var i = 0; i < theForm.elements.length; i++) {
+          if (theForm.elements[i].type == "checkbox") {
+            if (theForm.elements[i].checked) {
+              toppings += theForm.elements[i].value + " ";
+            }
+          }
+        }
+        alert(toppings);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form1" onsubmit="checkToppings()">
+      <h1>Mario and Luigi's Pizza!</h1>
+      <br>
+      <b>Enter a name for the order</b><br>
+      <input type="text" name="custName"><br>
+      <b>Enter address for the order</b><br>
+      <textarea name="address" cols="15" rows="5"></textarea><br>
+      <br>
+      <b>Enter a valid contact email</b><br>
+      <input type="text" name="email"><br>
+      <b>Enter a valid contact phone number</b><br>
+      <input type="text" name="phone"><br>
+      <b>Choose a size for the pizza</b><br>
+      <select size="1">
+          <option value="list item one">small</option>
+          <option value="list item two">medium</option>
+          <option value="list item three">large</option>
+      </select>
+      <br />
+      <input type="checkbox" name="checkbox1" value="mushrooms" >Mushrooms <br />
+      <input type="checkbox" name="checkbox2" value="pepperoni" >Pepperoni <br />
+      <input type="checkbox" name="checkbox3" value="cheese" >Cheese <br />
+      <input type="submit" value="Place Order" />
+    </form>
+  </body>
+</html>
