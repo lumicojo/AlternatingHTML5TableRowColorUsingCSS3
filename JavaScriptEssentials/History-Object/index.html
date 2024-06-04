@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The History Object</title>
+    <script>
+
+      var len = window.history.length;
+      document.write("The number of pages visited before this page is " + len + " pages!!!.<br>")
+
+      function goForward() {
+        window.history.forward();
+
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+
+      // function goNum() {
+      //   window.history.go(-2);
+      // }
+    </script>
+  </head>
+  <body>
+    <button name="button1" onclick="goForward()">Forward in History</button>
+    <button name="button2" onclick="goBack()">Back in History</button>
+
+    <!-- <button name="button3" onclick="goNum()">Specific History Location</button> -->
+  </body>
+</html>
