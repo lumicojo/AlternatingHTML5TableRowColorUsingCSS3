@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8"/>
+  <head>
+    <title>Get ElementById</title>
+    <script>
+      function changeElement()
+      {
+        // alert(document.getElementById('one').innerHTML);
+        document.getElementById('two').innerHTML = "This content has change dynamically";
+        // this is for the paragraph three so I commented the first alert.
+        alert(document.getElementById('textInput').value);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="heading">getElementById</h1>
+    <p id="one">This is paragraph one. This is paragraph one.</p>
+    <p id="two">This is paragraph two. This is paragraph two.</p>
+    <!-- <p id="thre">This is paragraph three. This is paragraph three.</p> -->
+    <!-- we going to change paragraph three with: -->
+    <p id="three"><input type="text" id="textInput"/></p>
+    <button onClick="changeElement()" id="myButton">Change Elements</button>
+  </body>
+</html>
