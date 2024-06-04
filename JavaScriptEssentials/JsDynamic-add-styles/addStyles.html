@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>Dynamic Styles</title>
+    <script type="text/javaScript">
+      function dynoStyles() {
+
+        var style = document.createElement("style");
+        style.type = "text/css";
+        style.innerHTML = ".cssClass { color: blue; font-family: arial;}";
+        document.getElementsByTagName("head")[0].appendChild(style);
+
+        document.getElementById("test").className = "cssClass";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="test">The quick brown fox jumps over the lazy dog</div>
+    <input type="button" value="change styles" onclick="dynoStyles()" />
+  </body>
+</html>

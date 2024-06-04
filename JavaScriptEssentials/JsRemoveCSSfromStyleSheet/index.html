@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http="equiv=Content-Type" content="text/html; charset=utf-8">
+    <title>JavaScript Remove CSS from Style Sheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javaScript">
+        var indexVa1 =0;
+
+        function addRule() {
+          var sheets = document.styleSheets[0];
+          var ruleName = document.getElementById("ruleName").value.
+          var ruleRules = document.getElementById("ruleRules").value;
+          var ruleIdx = document.getElementById("ruleIdx").value;
+          document.styleSheets[0].insertRule(ruleName + ruleRules, ruleIdx);
+          getsSS();
+        }
+        function delRule() {
+            var sheets = document.styleSheets[0];
+            var ruleDel = document.getElementById("ruleIdx").value;
+            document.styleSheets[0].removeRule(ruleDel);
+            getSS();
+        }
+        function getSS() {
+          var cssTemp = document.styleSheet[0].cssText;
+          var cssTemp1 = "<b>Index #0</b><br>";
+          for (i = 0; i <= cssTemp.length; i++){
+              char = cssTemp.substring(i, i + 1);
+              if (char == "}") {
+                indexVal++;
+                cssTemp1 += char + "<br><b>Index #"+ indexVal + "</b><br>";
+              }
+              else if (char == "{" || char ==";") {
+                cssTemp1 += char + "<br>";
+              } else {
+                cssTemp1 += char;
+              }
+          }
+          document.getElementById("output").innerHTML = cssTemp1;
+          indexVal = 0;
+        }
+    </script>
+  </head>
+  <body>
+    Rule name:<br>
+    <input type="text" id="ruleName" size="40" /><br><br>
+    Rule index #:<br>
+    <input type="text" id="ruleIdx" size="10" /><br><br>
+    Rule parameters:<br>
+    <textarea id="ruleRules" rows="10" cols="50"></textarea><br><br>
+    <input type="button" onclick="addRule()" value="ADD"/> <input type="button" onclick="delRule()"
+    value="DELETE" /><br><br><br><br>
+    <input type="button" onclick="getSS()" value="LIST RULES"/> <br><br>
+    <h1>This is a heading &lt;h1&gt;</h1>
+    <span class="newRule">This is a &lt;span&gt;</span>
+    <p>This is a paragraph &lt;p&gt;</p>
+    <div id="div1">&lt;div&gt; "div1"</div><br>
+    <hr>
+    <span id="output"></span>
+    <script type="text/javascript">
+      window.onload = getSS();
+    </script>
+  </body>
+</html>

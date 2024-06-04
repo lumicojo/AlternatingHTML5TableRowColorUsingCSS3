@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http="equiv=Content-Type" content="text/html; charset=utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javaScript">
+      function doIt() {
+        var cssNum = document.getElementById("ssNum").value;
+        var cssTemp = document.styleSheets[cssNum].cssText;
+        var cssTemp1 = "";
+        for (i = 0; i <= cssTemp.length; i++){
+            char = cssTemp.substring(i, i + 1);
+            if (char == "{" || char == "}" || char ==";") {
+              cssTemp1 += char + "<br>";
+            } else {
+              cssTemp1 += char;
+            }
+        }
+        document.getElementById("output").innerHTML = cssTemp1;
+      }
+    </script>
+    <style>
+      p {
+        font-family: Calibri;
+        font-size: 18px;
+      }
+
+      * {
+
+        font-family: Segoe "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+        font-size: 12px;
+      }
+      body {
+        background-image: url(../images/background.jpg);
+      }
+      a:link {
+        color: #ffffff;
+        text-align: center;
+        font-family: Arial;
+        font-weight: 100;
+        font-size: 16px;
+      }
+      a:visited {
+        color: #ffffff;
+      }
+
+    </style>
+  </head>
+  <body>
+
+  </body>
+</html>

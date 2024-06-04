@@ -1,0 +1,55 @@
+* {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+font-size: 12px;
+ }
+body {
+  background-image: url("../image/background.jpg");
+ }
+
+a:link {
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial;
+  font-weight: 100;
+  font-size: 16px;
+ }
+ a:visited {
+  color: #ffffff;
+ }
+h2 {
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2px;
+ }
+li {
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 12px;
+ }
+
+label {
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 12px;
+ }
+
+.viddesc1 {
+  text-align: center;
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-weight: bold;
+ }
+
+#video {
+  width: 260px;
+  height: 180px;
+  border: 2px solid #000000;
+ }
+
+.roundbox1 {
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 18px;
+  text-align: center;
+ }
+
+h1 {
+  font-size: 18px; /* Added 'px' for units */
+ }

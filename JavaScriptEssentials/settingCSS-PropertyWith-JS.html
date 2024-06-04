@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changing CSS whit JavaScript</title>
+    <script>
+      function changeCSS(event)
+      {
+        /*grab the first p paragraph from the body and bring it to javaScript*/
+        var first = document.getElementById("one"); /*this change the first (p) paragraph*/
+        first.style.fontFamily = "Arial, Verdana, sans-serf";
+
+        var heading = document.getElementById("heading");  /*this change the heading*/
+        heading.style.fontSize = "1m";
+
+        var second = document.getElementById("two"); /*this change the second (p) paragraph*/
+        second.style.color = "rgb(255,0,0)";
+
+        /*grab the third p paragraph from the body and bring it to javaScript*/
+        var third = document.getElementById("three");
+        third.style.fontWeight = "bold";
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1 id="heading">Styling with CSS</h1>
+    <p id="one">This is paragraph one. This is paragraph one.</p>
+    <p id="two">This is paragraph two. This is paragraph two.</p>
+    <p id="three">This is paragraph three. This is paragraph three.</p>
+    <button onclick="changeCSS(event)" id="myButton">Change CSS</button>
+  </body>
+</html>

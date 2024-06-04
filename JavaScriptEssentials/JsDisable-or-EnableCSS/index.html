@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JavaScript Disable or Enable a CSS Style Sheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javaScript">
+        var indexVa1 =0;
+        function disable() {
+          document.styleSheets[0].disabled = true;
+          getSS();
+        }
+        function enable() {
+          document.styleSheets[0].disabled = false;
+          getSS();
+        }
+        function getSS() {
+          var cssTemp = document.styleSheets[0].cssText;
+          var cssTemp1 = "<b>Index #0</b><br>";
+          for (i = 0; i <= cssTemp.length; i++){
+              char = cssTemp.substring(i, i + 1);
+              if (char == "}") {
+                indexVal++;
+                cssTemp1 += char + "<br><b>Index #"+ indexVal + "</b><br>";
+              }
+              else if (char == "{" || char ==";") {
+                cssTemp1 += char + "<br>";
+              } else {
+                cssTemp1 += char;
+              }
+          }
+          document.getElementById("output").innerHTML = cssTemp1;
+          indexVal = 0;
+        }
+    </script>
+  </head>
+  <body>
+    <b>Rule name *, Index 0</b><br><br>
+    <!-- Rule index #:<br> -->
+    <b>Rule name p, Index 1:</b><br><br>
+   <p>The quick brown fox jumped over the lazy dog</p>
+   <b>Rule name h1, Index 2:</b><br><br>
+   <h1>News Alert</h1>
+   <b>Rule name a:link, Index3:</b><br>
+   <input type="button" onclick="getSS()" value="Click me"/> <br><br>
+    <textarea id="ruleRules" rows="10" cols="50"></textarea><br><br>
+    <input type="button" onclick="disableRule()" value="Disable"/> <input type="button" onclick="enableRule()"
+    value="Enable" /><br><br><br><br>
+
+    <h1>This is a heading &lt;h1&gt;</h1>
+    <span class="newRule">This is a &lt;span&gt;</span>
+    <p>This is a paragraph &lt;p&gt;</p>
+    <div id="div1">&lt;div&gt; "div1"</div><br>
+    <hr>
+    <span id="output"></span>
+    <script type="text/javascript">
+      window.onload = getSS();
+
+  </body>
+</html>
