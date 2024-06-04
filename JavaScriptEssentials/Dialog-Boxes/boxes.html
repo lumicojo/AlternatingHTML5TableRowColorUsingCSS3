@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dialogue Boxes</title>
+    <script type="text/javascript">
+
+      function myAlert() {
+        alert("hey what are you looking at??");
+      }
+
+      function myPrompt() {
+        var food = prompt("What is your favorite summer food?", "BBQ");
+        if (food) {
+          alert("Your favorite summer food is: " + food);
+        }
+        else {
+          alert("Your pressed Cancel or no value was enter!");
+        }
+      }
+
+      function myConfirm() {
+        var response = confirm("Confirm Test: Continue?");
+        if (response) {
+          alert("Your response was ok!");
+        }
+        else {
+          alert("Your response was Cancel!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="myAlert()">Alert</button>
+    <button onclick="myPrompt()">Prompt</button>
+    <button onclick="myConfirm()">Confirm</button>
+  </body>
+</html>
