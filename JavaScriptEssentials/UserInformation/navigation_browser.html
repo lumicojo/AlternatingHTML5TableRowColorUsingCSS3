@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavScript Anonymous function</title>
+    <script type="text/javascript">
+
+      function browserInfo() {
+        var infotxt = " ";
+        infotxt += "<p>Browser Name: " + navigator.appName + "</p>";
+        infotxt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+        infotxt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+        infotxt += "<p>Platform: " + navigator.platform + "</p>";
+        infotxt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+        infotxt += "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+
+        document.getElementById("info").style.font = "12px arial";
+        document.getElementById("info").innerHTML =infotxt;
+      }
+    </script>
+  </head>
+  <body>
+    <button name="button1" onclick="browserInfo()">Get Browser Info</button>
+
+    <div id="info"></div>
+  </body>
+</html>

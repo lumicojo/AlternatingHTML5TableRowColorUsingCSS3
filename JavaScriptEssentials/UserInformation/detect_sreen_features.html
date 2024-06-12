@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavScript Screen Object</title>
+    <script type="text/javascript">
+
+      function getLocationInfo() {
+
+        var infotxt = " ";
+        infotxt += "<p>Screen width and height: " +screen.width + "*" + screen.height+"</p>";
+        infotxt += "<p>Available width and height: " +screen.width + "*" + screen.height+"</p>";
+        infotxt += "<p>The color: " + screen.colorDepth +"</p>";
+        infotxt += "<p>The color resolution: " + screen.pixelDepth +"</p>";
+
+
+        document.getElementById("info").style.font = "12px arial";
+        document.getElementById("info").innerHTML = infotxt;
+      }
+
+    </script>
+  </head>
+  <body>
+    <button name="button1" onclick="getLocationInfo()">Get Screen Info</button>
+
+    <div id="info"></div>
+  </body>
+</html>

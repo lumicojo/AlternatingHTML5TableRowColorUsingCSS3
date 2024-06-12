@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavScript Obtain User Info</title>
+  </head>
+  <body>
+    <button onclick="getInfo()">Click Me</button>
+    <div id="infoDiv"></div>
+    <!-- Create JavScript -->
+    <script type="text/javascript">
+      function getInfo() {
+        var user = "User agent: " + navigator.userAgent + "<br>";
+        user += "Cookies: " + navigator.cookieEnabled + "<br>";
+        user += "appName: " + navigator.appName + "<br>";
+        document.getElementById("infoDiv").innerHTML = user;
+      }
+    </script>
+  </body>
+</html>

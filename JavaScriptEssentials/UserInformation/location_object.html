@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavScript Location Object</title>
+    <script type="text/javascript">
+
+      function getLocationInfo() {
+
+        var infotxt = " ";
+        infotxt += "<p>Browser Location: " + window.location + "</p>";
+
+        document.getElementById("info").style.font = "12px arial";
+        document.getElementById("info").innerHTML = infotxt;
+      }
+
+      function changeLocation() {
+
+        window.location = "http://www.microsoft.com";
+      }
+    </script>
+  </head>
+  <body>
+    <button name="button1" onclick="getLocationInfo()">Get Browser Info</button>
+    <button name="button2" onclick="changeLocation()">Change location</button>
+    <div id="info"></div>
+  </body>
+</html>

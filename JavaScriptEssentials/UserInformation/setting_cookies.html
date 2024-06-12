@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavScript Setting Cookies</title>
+    <script>
+      function setCookie(myName, myValue) {
+
+        var myDate = new Date();
+        myDate.setMonth(myDate.getMonth() + 12);
+        expireDate = myDate.toUTCString();
+
+        myValue = escape(myValue);
+
+        document.cookie = myName + "=" + myValue + ";expires=" + expireDate
+        document.cookie = "value1=Cojo;"+ "expires=" + expireDate;
+        //set alert to make sure it was set
+        alert(document.cookie);
+      }
+    </script>
+
+  </head>
+  <body>
+    <button name="button1" onclick="setCookie('name', 'Lumi')">SetCookie</button>
+
+    <div id="info"></div>
+  </body>
+</html>
