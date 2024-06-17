@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Drag and Drop</title>
+    <script>
+      function allowDropping(event) {
+        event.preventDefault();
+      }
+      function dragging(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+      }
+      function dropping(event) {
+        event.preventDefault();
+        var info = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(info));
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="dropframe" ondrop="dropping(event)" ondragover="allowDropping(event)" style="width: 325px; height: 250px;
+    background-color: #906;"></div>
+
+    <img id="sunsetpic" src="file:///Users/luminitacojocariu/Desktop/images/sunset.jpg" draggable="true" ondragstart="dragging(event)"
+    style="width: 325px; height: 250px"/>
+  </body>
+</html>

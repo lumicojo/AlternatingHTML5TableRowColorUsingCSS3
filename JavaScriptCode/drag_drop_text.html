@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Drag and Drop an image HTML element</title>
+    <style>
+      div {
+        width: 750px;
+        height: 150px;
+        border: 1px solid #000000;
+        cursor:pointer;
+      }
+    </style>
+      <script type="text/javascript">
+
+      function drag(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+      }
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        document.getElementById("output").innerHTML = event.target.id;
+      }
+      </script>
+  </head>
+  <body>
+    <p>Drag the paragraph into a box:</p>
+    <div id="div1" class="div" ondrop="drop(event)" ondragover="drop(event)" draggable="true ondragstart =drag(event)"></div>
+    <br>
+    <div id="div2" class="div" ondrop="drop(event)" ondragover="drop(event)" draggable="true ondragstart =drag(event)"></div>
+    <br>
+    <div id="div3" class="div" ondrop="drop(event)" ondragover="drop(event)" draggable="true ondragstart =drag(event)"></div>
+    <br>
+
+    <!-- <div id="divA" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <div id="divB" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <div id="divC" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br> -->
+
+    Location: <span id="dragText" draggable="true" ondragstart="drag(event)">Sharpen your skills. Upgrade your career.
+      Find the right learning path for you,
+       based on your role and skills. Take part in hands-on practice, study for a certification,
+       and much more - all personalized for you.
+      Not included: Compliance, Leadership Development Program content,
+      and Engineering books</span>
+  </body>
+</html>

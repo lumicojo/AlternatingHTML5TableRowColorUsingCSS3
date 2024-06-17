@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Drag and Drop an image HTML element</title>
+    <style>
+      .div {
+        width: 250px;
+        height: 70px;
+        border: 1px solid #000000;
+      }
+    </style>
+      <script type="text/javascript">
+      function drag(event) {
+        event.dataTransfer.setData("Text", event.target.id)
+      }
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        document.getElementById("output").innerHTML = event.target.id;
+      }
+      </script>
+  </head>
+  <body>
+    <p>Drag the image into a box:</p>
+    <div id="div1" class="div" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <div id="div2" class="div" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <div id="div3" class="div" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <div id="div4" class="div" ondrop="drop(event)" ondragover="drop(event)"></div>
+    <br>
+    <img id="drag1" src="dialonics_logo.png" draggable="true"
+    ondragstart="drag(event)" width="250" style="cursor: pointer;">
+    <br>
+    Location: <span id="output"></span>
+  </body>
+</html>
