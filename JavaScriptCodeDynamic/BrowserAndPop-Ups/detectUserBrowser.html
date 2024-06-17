@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Obtain a Variable's Type</title>
+    <script type="text/javascript">
+      function doIt() {
+        var screenSize = "Screen size: " + window.screen.availWidth + " x "
+        + window.screen.availHeight + "<br>";
+        var windowSize = "Window size:" + window.innerWidth + " x "
+        + window.innerHeight + "<br>";
+        var result = screenSize + windowSize;
+        document.getElementById("output").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" onclick="doIt()" value="Do It" />
+    <br><br>
+    <span id="output"></span>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Obtain a Variable's Type</title>
+    <script type="text/javascript">
+      function doIt() {
+        var1 = "1";
+        var2 = 1;
+        var3 = true;
+        var4 = new Date();
+        var5 = Math.sin;
+        var var6;
+        document.getElementById("output1").value = typeof var1;
+        document.getElementById("output2").value = typeof var2;
+        document.getElementById("output3").value = typeof var3;
+        document.getElementById("output4").value = typeof var4;
+        document.getElementById("output5").value = typeof var5;
+        document.getElementById("output6").value = typeof var6;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Enter or paste a string:</p>
+    "1" = <input type="text" size="10" id="output1">
+    <br><br>
+    1 = <input type="text" size="10" id="output2">
+    <br><br>
+    true = <input type="text" size="10" id="output3">
+    <br><br>
+    new Date() = <input type="text" size="10" id="output4">
+    <br><br>
+    Math.sin = <input type="text" size="10" id="output5">
+    <br><br>
+    undefined = <input type="text" size="10" id="output6">
+    <br><br>
+    <input type="button" onclick="doIt()" value="Click Me" /><br><br>
+    <span id="output"></span>
+  </body>
+</html>

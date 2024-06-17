@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content - Type" content="text/html; charset=utf-8">
+    <title>Generate an Anchor Link</title>
+   <script type="text/javascript">
+      function createLink() {
+        var inputName = document.getElementById("name").value;
+        var inputUrl = document.getElementById("location").value;
+        var newLink = inputName.anchor(inputUrl);
+        document.getElementById("output").value = newLink;
+      }
+   </script>
+  </head>
+  <body>
+    <p>Create a hyperlink:</p>
+    Name: <input type="text" size="25" id="name" /><br><br>
+    Location: <input type="text" size="25" id="location" /><br><br>
+    <button onclick="createLink()" onsubmit="return false">Try it</button>
+    <br><br>
+    <input type="text" id="output" size="50 "/>
+  </body>
+</html>

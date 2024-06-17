@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Create Pop-Up Link</title>
+  <script type="text/javascript">
+    function popUp(event, text, color, textCol) {
+      var popElem = document.getElementById("PopUp");
+      var x = event.clientX + 15;
+      var y = event.clientY + 15;
+      popElem.style.left = x + "px";
+      popElem.style.top = y + "px";
+      popElem.style.backgroundColor = color;
+      popElem.innerHTML = text;
+      popElem.style.display = "block";
+    }
+
+    function clearPop() {
+      var popElem = document.getElementById('PopUp');
+      popElem.style.display = "none";
+    }
+  </script>
+  <style>
+    body {
+      font-family: Calibri;
+      font-size: 16px;
+    }
+    .popup {
+      font-family: Calibri;
+      font-size: 16px;
+      color: #0026ff;
+    }
+    #PopUp {
+      display: none;
+      position: absolute;
+      border: solid black 1px;
+      padding: 10px;
+      font-family: Calibri;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  One of the functions of strategic planning is to determine an
+  organization's.It's scary to change careers.
+  Click <a href="javascript:void(null)"
+  onclick="popUp(event, 'At Dialloncs, Inc., we pride ourselves on our strategic direction and how it\'s tightly integrated with our organization\'s customer focus.','#ff9900');"  onmouseout="clearPop
+ ()">here</a> to learn more.
+  <br><br>
+
+
+  <br><br>
+
+  <!-- PopUp Container -->
+  <div id="popUp" style="display: none; position: absolute; border: solid black 1px;
+     padding: 10px; font-family: Calibri; font-size: 16px;">
+     <span id="PopUpText"><!-- Text will autofill here --></span></div>
+  <!-- End PopUp Container -->
+</body>
+</html>

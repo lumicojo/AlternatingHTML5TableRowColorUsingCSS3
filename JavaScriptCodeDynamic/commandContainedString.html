@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Executing JS Commands Contained in a String</title>
+    <script type="text/javascript">
+      function mathProp(mathP) {
+        var createMath = "Math." + mathP;
+        document.getElementById("showProp").value = eval(createMath);
+      }
+    </script>
+
+    <script type="text/javascript">
+      function mathMeth(mathM) {
+        var chkField;
+        var calcContainer;
+        var buildMathObj = "Math." + mathM + '(';
+        checkValues();
+        buildObject();
+        displayResult();
+
+      function checkValues() {
+        valArray = newArray();
+        var i = 0;
+        while (i <= 9 && eval(chkField) != '') {
+          chkField = "calcVal" + i + ".value";
+          valArray[i] = eval(chkField);
+          i++
+        } fieldsFilled = i - 1;
+      }
+
+      function buildObject() {
+        for (var i =0; i <= fieldsFilled; i++) {
+          calcContainer = ("calcVal" + i + '.value');
+          buildMathObj += eval(calcContainer);
+          if (i < fieldsFilled - 1) {
+            buildMathObj += ',';
+          }
+        }
+        buildMathObj += ')';
+        // alert(buildMathObj);
+      }
+      function displayResult() {
+        document.getElementById("showMeth").value = eval(buildMathObj);
+      }
+    }
+
+    </script>
+  <style>
+      p {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+  <form>
+    <p><b>JavaScript Math Object Properties:</b></p>
+    <input type="text" id="showProp" size="50"><br><br>
+    <!-- <input type="submit" value="Submit">-->
+    <!-- <form action="form_submit.php">-->
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="E">(E) Euler's Number <span style="font-family:
+      'Times New Roman', Times, serif; font-size: 22px; font-style: italic;
+      font-weight: bold;">e</span><br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="LN2">(LN2) Logarithm of 2<br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="LN10">(LN10) Logarithm of 10<br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="LOG2E">(LOG2E) Base - 2 Logarithm of <span style="font-family:
+      'Times New Roman', Times, serif; font-size: 22px; font-style: italic;
+      font-weight: bold;">e</span><br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="LOG10E">(LOG10E) Base - 10 Logarithm of <span style="font-family:
+      'Times New Roman', Times, serif; font-size: 22px; font-style: italic;
+      font-weight: bold;">e</span><br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="PI">(PI) PI<br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="SQRT1_2">(SQRT1_2) Square Root of 1/2<br>
+    <input type="radio" name="mathFunction" onclick="mathProp(this.value)"
+      value="SQRT2">(SQRT2) Square Root of 2<br>
+    <br>
+    </form>
+
+    <p><b>JavaScript Math Object Methods:</b></p>
+    <p>Enter a Value:</p>
+    <input type="text" id="calcVal0" size="5">
+    <input type="text" id="calcVal1" size="5">
+    <input type="text" id="calcVal2" size="5">
+    <input type="text" id="calcVal3" size="5">
+    <input type="text" id="calcVal4" size="5">
+    <input type="text" id="calcVal5" size="5">
+    <input type="text" id="calcVal6" size="5">
+    <input type="text" id="calcVal7" size="5">
+    <input type="text" id="calcVal8" size="5">
+    <input type="text" id="calcVal9" size="5">
+    <input type="text" id="calcVal10" size="5">
+
+  </body>
+</html>

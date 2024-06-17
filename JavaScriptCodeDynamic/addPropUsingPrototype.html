@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Add Properties to Object Using Prototype</title>
+    <script>
+      var i = 0;
+      var newCars = [];
+      function doIt() {
+        i++;
+        var carBrand = document.getElementById("input1").value;
+        var carModel = document.getElementById("input2").value;
+        var carYear = document.getElementById("input3").value;
+        var carCost = document.getElementById("input4").value;
+        newCars[i] = new car(carBrand, carModel, carYear, carCost);
+        var result = "Entry #" + i + ":<br>" + newCars[i].brand + '<br>' +
+        newCars[i].model + '<br>' + newCars[i].year + '<br>' + '$' +
+        newCars[i].cost + '<br><br>';
+        document.getElementById("output").innerHTML += result;
+      }
+      function car(brand, model, year, cost) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.cost = cost;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Enter or paste a string:</p>
+    Brand: <input type="text" size="10" id="input1"><br><br>
+    Model: <input type="text" size="10" id="input2"><br><br>
+    Year: <input type="text" size="10" id="input3"><br><br>
+    Cost: <input type="text" size="10" id="input4"><br><br>
+    <input type="button" onclick="doIt()" value="Click Me"><br><br>
+    <span id="output"></span>
+  </body>
+</html>
