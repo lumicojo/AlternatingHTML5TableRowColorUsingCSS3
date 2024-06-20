@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Boolean Object</title>
+    <script type="text/javascript">
+      var jsonWineString = '{"wines": [{"name": "Earthfarm Shiraz","age": 12,"imported": false},{"name": "Frondino Merlot","age": 15,"imported": true}]}';
+
+      var jObj = JSON.parse(jsonWineString);
+
+      document.write(jObj.wines[0].name + "<br>");
+      document.write(jObj.wines[0].age + "<br>");
+      document.write(jObj.wines[0].imported + "<br>");
+
+      document.write(jObj.wines[1].name + "<br>");
+      document.write(jObj.wines[1].age + "<br>");
+      document.write(jObj.wines[1].imported + "<br>");
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

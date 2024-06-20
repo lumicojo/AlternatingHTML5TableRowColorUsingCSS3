@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Processing Order of Math Operators</title>
+    <script></script>
+  </head>
+  <body>
+    Enter JavaScript Command:<br> <input type="text" size="50" id="input"/>
+    <br><br>
+    <input type="button" value="Execute" onclick="doIt(this)" /><br><br>
+    Output:
+    <div id="output" style="height: 100px; width: 300px; border: 1px
+    solid;"></div><br>
+    <table width="500">
+      <tr>
+        <td>
+          <b>BEDMAS:</b><br>
+          1. Brackets ()<br>
+          2. Exponentiation Math.pow(x,y)<br>
+          3. Division /<br>
+          4. Multiplication *<br>
+          5. Addition +<br>
+          6. Subtraction -<br>
+        </td>
+          <td>
+            PEMDAS:<br><br>
+            1. Parentheses ()<br>
+            2. Exponentiation Math.pow(x,y)<br>
+            3. Multiplication *<br>
+            4. Division /Multiplication *
+            5. Addition +<br>
+            6. Subtraction -<br>
+          </td>
+      </tr>
+    </table>
+  </body>
+</html>

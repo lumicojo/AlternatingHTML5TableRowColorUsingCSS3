@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Read and Assign Class Names</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript">
+
+      function doIt(chClass) {
+        var addClass = chClass.value;
+        var object = document.getElementById("div1");
+        object.className = addClass;
+        object.innerHTML = addClass;
+      }
+    </script>
+    <style>
+      .class1 {
+        width: 200px;
+        height: 300px;
+        color: #ffd000;
+        background-color: #ff0a00;
+      }
+      .class2 {
+        width: 100px;
+        height: 400px;
+        color: #ffd000;
+        background-color: #000000;
+      }
+
+      class3 {
+        width: 500px;
+        height: 250px;
+        color: #ffd000;
+        background-image:("sunset copy.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">&lt;div&gt; "div1"</div><br>
+    <input type="button" value="class1" onclick="doIt(this)" />
+    <input type="button" value="class2" onclick="doIt(this)" />
+    <input type="button" value="class3" onclick="doIt(this)" />
+    <hr>
+    <span id="output"></span>
+  </body>
+</html>
